@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zephyr Bot Commands</title>
+</head>
+<style>
+    table {
+        border: 1px solid #000;
+        border-collapse: collapse;
+        width: 1500px;
+    }
+
+    td,th {
+        border: 1px solid #000;
+    }
+
+    td,th {
+        color: #000;
+        font-family: sans-serif;
+        padding: 5px 10px;
+    }
+
+    td:first-child, td:nth-child(2) {
+        width: 10%;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Input(s)</th>
+            <th>Description</th>
+            <th>Aliases</th>
+        </tr>
+        <tr>
+            <td>$3ds</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Nintendo 3ds game cover</td>
+            <td>nintendo3ds,4ds</td>
+        </tr>
+        <tr>
+            <td>$acro</td>
+            <td>(text..)</td>
+            <td>Bolds the first character of each word</td>
+            <td>firstc,boldfirst</td>
+        </tr>
+        <tr>
+            <td>$addictive</td>
+            <td>&lt;image&gt;</td>
+            <td>The most addictive games of 2018</td>
+            <td>nb</td>
+        </tr>
+        <tr>
+            <td>$admins</td>
+            <td></td>
+            <td>Returns a list of users with admin permissions in the current guild</td>
+            <td>adms,administrators</td>
+        </tr>
+        <tr>
+            <td>$alberto</td>
+            <td>&lt;image&gt;</td>
+            <td>What in the world is he pointing at?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$album</td>
+            <td>&lt;image&gt;</td>
+            <td>Up and coming hot album</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$ally</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the ally flag to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$amazon</td>
+            <td>&lt;user/image&gt; &lt;0-5 stars&gt; "&lt;title&gt;" "&lt;description&gt;" </td>
+            <td>Create an amazon review</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$american</td>
+            <td>&lt;image&gt;</td>
+            <td>Probably the best flag in the world, overlaid with some transparency on an image of your choosing</td>
+            <td>murican</td>
+        </tr>
+        <tr>
+            <td>$amidisabled</td>
+            <td>&lt;text&gt;</td>
+            <td>Homer from the Simpsons reading the book 'Am I disabled?'</td>
+            <td>ami</td>
+        </tr>
+        <tr>
+            <td>$aroused</td>
+            <td>&lt;image&gt;</td>
+            <td>Does this make you aroused?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$asexual</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the asexual flag to an image</td>
+            <td>asex</td>
+        </tr>
+        <tr>
+            <td>$atari</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on an Atari 2600 game cover</td>
+            <td>atari2600,atari2600game,atarigame</td>
+        </tr>
+        <tr>
+            <td>$aug</td>
+            <td>&lt;image&gt;</td>
+            <td>Target practice</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$avatar</td>
+            <td>&lt;image&gt;</td>
+            <td>Replies with the user's avatar</td>
+            <td>ava,pfp,av,avat,profilepic,profilepicture,avatars,profilepictures,avata</td>
+        </tr>
+        <tr>
+            <td>$backup</td>
+            <td>&lt;image&gt;</td>
+            <td>Nope, time to turn around</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$badnames</td>
+            <td>[-min]</td>
+            <td>Returns a list of users with bad names in the current guild</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$bale</td>
+            <td>&lt;image&gt;</td>
+            <td>He appears to be playing something on the television, whilst preoccupied</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$bankhate</td>
+            <td>&lt;image&gt;</td>
+            <td>Banks HATE him!</td>
+            <td>bankshate,bankshat,bankshatehim,bankshateher</td>
+        </tr>
+        <tr>
+            <td>$binary</td>
+            <td>(text..)</td>
+            <td>Returns the binary representation of the given string</td>
+            <td>bin</td>
+        </tr>
+        <tr>
+            <td>$bisexual</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the bisexual flag to an image</td>
+            <td>bi,bisex</td>
+        </tr>
+        <tr>
+            <td>$blackpanther</td>
+            <td>&lt;image&gt;</td>
+            <td>Rise up at the movie theater</td>
+            <td>dep</td>
+        </tr>
+        <tr>
+            <td>$blue</td>
+            <td>&lt;image&gt; [amount]</td>
+            <td>Apply blue to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$blur</td>
+            <td>&lt;image&gt; [amount]</td>
+            <td>Apply blur to image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$bluray</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a BluRay cover</td>
+            <td>blueray</td>
+        </tr>
+        <tr>
+            <td>$bond</td>
+            <td></td>
+            <td>007 barrel</td>
+            <td>007,james</td>
+        </tr>
+        <tr>
+            <td>$border</td>
+            <td>&lt;image&gt;</td>
+            <td>Apply a border to an image</td>
+            <td>bord,frame,fr</td>
+        </tr>
+        <tr>
+            <td>$bowser</td>
+            <td>&lt;image&gt;</td>
+            <td>Bowser and Baby Bowser</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$brazzers</td>
+            <td>&lt;image&gt;</td>
+            <td>Overlays the Brazzers logo on an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$brobee</td>
+            <td>&lt;image&gt;</td>
+            <td>Some green dude riding a bicycle</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$bubble/2</td>
+            <td>&lt;image&gt;</td>
+            <td>Multiply an image into a bubble (arcsin)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$bytes</td>
+            <td>(text..)</td>
+            <td>Returns the size in bytes of the given string</td>
+            <td>size</td>
+        </tr>
+        <tr>
+            <td>$came</td>
+            <td>&lt;image&gt;</td>
+            <td>Professor Oak couldnt help but to come when he heard the news!</td>
+            <td>distort,dist</td>
+        </tr>
+        <tr>
+            <td>$came</td>
+            <td>&lt;image&gt;</td>
+            <td>Professor Oak couldnt help but to come after hearing this!</td>
+            <td>pokemon,professoroak</td>
+        </tr>
+        <tr>
+            <td>$canada</td>
+            <td>&lt;image&gt;</td>
+            <td>The Canadian flag (30% opacity) overlaid on an image of your choosing</td>
+            <td>canadia,canadian,maplesyrup</td>
+        </tr>
+        <tr>
+            <td>$captcha</td>
+            <td>&lt;image&gt;</td>
+            <td>Create your own custom reCAPTCHA</td>
+            <td>recaptcha</td>
+        </tr>
+        <tr>
+            <td>$cfnm</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates an awesome picture out of the specified image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$chan</td>
+            <td>[board] [threadid]</td>
+            <td>Searches 4Chan for a random post. Add optional board to search randomly there or board and threadid to pull a random post from that thread.</td>
+            <td>4chan,4c</td>
+        </tr>
+        <tr>
+            <td>$change</td>
+            <td>&lt;image&gt;</td>
+            <td>Changes the image with magick</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$chani</td>
+            <td>[board] [threadid]</td>
+            <td>ONLY RETURNS IMAGES - Searches 4Chan for a random post. Add optional board to search randomly there or board and threadid to pull a random post from that thread.</td>
+            <td>4chani</td>
+        </tr>
+        <tr>
+            <td>$charcoal</td>
+            <td>&lt;image&gt; [-15-15]</td>
+            <td>Apply a charcoal filter to an image</td>
+            <td>char</td>
+        </tr>
+        <tr>
+            <td>$chubby</td>
+            <td>&lt;image&gt;</td>
+            <td>Chubby kid holding up a sign</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$clean</td>
+            <td>&lt;1-100&gt;</td>
+            <td>Purges bot messages in a channel. Limit 100 messages, default 20</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$coach</td>
+            <td>&lt;image&gt;</td>
+            <td>Coach Taylor overlaid on an image</td>
+            <td>taylor</td>
+        </tr>
+        <tr>
+            <td>$coachmad</td>
+            <td>&lt;image&gt;</td>
+            <td>Coach Taylor overlaid on an image</td>
+            <td>taylor2,coach2</td>
+        </tr>
+        <tr>
+            <td>$coachwhat</td>
+            <td>&lt;image&gt;</td>
+            <td>Coach Taylor overlaid on an image</td>
+            <td>cw</td>
+        </tr>
+        <tr>
+            <td>$color</td>
+            <td>&lt;image&gt; [color]</td>
+            <td>Color an image based on the given color</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$colorlist</td>
+            <td>&lt;image&gt;</td>
+            <td>Returns a link where all the 'valid' colors to be used in commands can be found at</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$commandcount</td>
+            <td></td>
+            <td>Lists the total number of all bot commands ( including hidden and admin only ones )</td>
+            <td>cmdcount,number</td>
+        </tr>
+        <tr>
+            <td>$commands</td>
+            <td>[top]</td>
+            <td>Provides a paginated list of all bot commands sorted A-Z ( $command top to list in order by top usage )</td>
+            <td>command,commandlist,commandslist,cmds,cmd,cmdlist</td>
+        </tr>
+        <tr>
+            <td>$confused</td>
+            <td></td>
+            <td>Attaches the gif of Alan from the hangover calculating tough math in his head</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$cp</td>
+            <td>&lt;image&gt;</td>
+            <td>Chris Pratt running away</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$crayon</td>
+            <td>&lt;image&gt;</td>
+            <td>Turns an image or emoji into a crayon like drawing</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$crayon</td>
+            <td>&lt;image&gt;</td>
+            <td>Turns an image or emoji into a crayon like drawing</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$dab</td>
+            <td></td>
+            <td>Returns a random dab pic</td>
+            <td>dabbing,dabs</td>
+        </tr>
+        <tr>
+            <td>$dab</td>
+            <td></td>
+            <td>Returns a random dab pic</td>
+            <td>dabbing,dabs</td>
+        </tr>
+        <tr>
+            <td>$darken</td>
+            <td>&lt;image&gt; [amount]</td>
+            <td>Darken image by provided amount</td>
+            <td>dkn</td>
+        </tr>
+        <tr>
+            <td>$ddg</td>
+            <td>&lt;image&gt;</td>
+            <td>Searches DuckDuckGo for whatever you want</td>
+            <td>duckduckgo</td>
+        </tr>
+        <tr>
+            <td>$ddgi</td>
+            <td>&lt;what to search for&gt;</td>
+            <td>Searches DuckDuckGo for images</td>
+            <td>duckduckgoimages</td>
+        </tr>
+        <tr>
+            <td>$ddos</td>
+            <td>&lt;user|IP&gt;</td>
+            <td>Performs a (fake) command that pretends to 'ddos' the selected user or IP address</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$deepfry</td>
+            <td>&lt;image&gt; [amount &gt;=1]</td>
+            <td>Deepfries an image</td>
+            <td>df</td>
+        </tr>
+        <tr>
+            <td>$deluxe</td>
+            <td>&lt;image&gt;</td>
+            <td>Makes an image deluxe</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$demisexual</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the demisexual flag to an image</td>
+            <td>demi</td>
+        </tr>
+        <tr>
+            <td>$depression</td>
+            <td>&lt;image&gt;</td>
+            <td>This is what depression looks like</td>
+            <td>dep</td>
+        </tr>
+        <tr>
+            <td>$desert</td>
+            <td>&lt;image&gt;</td>
+            <td>Target practice (desert eagle)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$dice</td>
+            <td></td>
+            <td>Rolls a pair of dice and returns the values of each dice. (Sorry, the pictures do not currently match the numbers output but I may make this happen at some point)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$dis</td>
+            <td></td>
+            <td>Displays a list of all disabled commands for this server</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$disable</td>
+            <td>&lt;command&gt; | -resetall | -nsfw</td>
+            <td>Disables a command for the entire server. Acts as a toggle. Must have MANAGE_GUILD permissions to use. Use $disable -reset to turn on all disabled commands. $disable -nsfw will disable any NSFW command.</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$discrim</td>
+            <td>[discrim 1-9999]</td>
+            <td>Replies with a list of matching discriminators and the usernames</td>
+            <td>disc</td>
+        </tr>
+        <tr>
+            <td>$disperse</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a random, blurred displacement map and applies to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$dist</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies some distortion to the image</td>
+            <td>dist2,dist3,dist4</td>
+        </tr>
+        <tr>
+            <td>$dont</td>
+            <td>&lt;image&gt;</td>
+            <td>Dont even think about it</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$donut</td>
+            <td>&lt;image&gt;</td>
+            <td>Turns an image into a donut</td>
+            <td>donot</td>
+        </tr>
+        <tr>
+            <td>$door</td>
+            <td>&lt;image&gt;</td>
+            <td>Someone\'s at the door</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$doug</td>
+            <td>&lt;image&gt;</td>
+            <td>FPS Doug going in for the HEADSHOT!</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$dreamcast</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Sega Dreamcast game cover</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$ds</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Nintendo DS game cover</td>
+            <td>nintendo2ds,2ds</td>
+        </tr>
+        <tr>
+            <td>$dump</td>
+            <td>&lt;image&gt;</td>
+            <td>Dumpster diving for dank memes</td>
+            <td>dumpster,dumpter,dumps</td>
+        </tr>
+        <tr>
+            <td>$dump</td>
+            <td>&lt;image&gt;</td>
+            <td>Dumpster diving for dank memes</td>
+            <td>dumpster,dumpter,dumps</td>
+        </tr>
+        <tr>
+            <td>$e2m</td>
+            <td>&lt;image&gt; [2-72]</td>
+            <td>Emoji to mosaic...yeah lets just go with that. Resource intensive, pls w8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$e3</td>
+            <td>&lt;image&gt;</td>
+            <td>Nintendo is releasing some big news at their E3 event this year</td>
+            <td>e3leak</td>
+        </tr>
+        <tr>
+            <td>$ecount</td>
+            <td></td>
+            <td>Displays output with stats for commands used by the bot along with details about what client they were sent on. Command data starts on September 9th, 2019</td>
+            <td>enhancedcount</td>
+        </tr>
+        <tr>
+            <td>$emboss</td>
+            <td>&lt;image&gt;</td>
+            <td>Emboss an image</td>
+            <td>emb</td>
+        </tr>
+        <tr>
+            <td>$enhance</td>
+            <td>&lt;image&gt;</td>
+            <td>Enhance an image</td>
+            <td>enh</td>
+        </tr>
+        <tr>
+            <td>$exo</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies some fun distortion effects to the image</td>
+            <td>exo2,exo3,exo4,exo5</td>
+        </tr>
+        <tr>
+            <td>$eyes</td>
+            <td>&lt;image&gt; &lt;eye type&gt;</td>
+            <td>Replaces the eyes on a face ( e.g. $eyes  red - this will replace the eyes on the face with red eyes )</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$face</td>
+            <td>&lt;image with face&gt; &lt;image to overlay in place of the face&gt;</td>
+            <td>Overlays an image onto all detected faces in an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$facemagik</td>
+            <td>&lt;image with face(s)&gt; [magik|blur|frost|rain|gold|spin]</td>
+            <td>Applies a magick effect to all faces detected in an image</td>
+            <td>fm</td>
+        </tr>
+        <tr>
+            <td>$faceswap</td>
+            <td>&lt;image&gt;</td>
+            <td>Swap faces in a single image</td>
+            <td>fs</td>
+        </tr>
+        <tr>
+            <td>$familytime</td>
+            <td>&lt;image&gt;</td>
+            <td>Good old fashioned family time around the tv</td>
+            <td>ft</td>
+        </tr>
+        <tr>
+            <td>$familytime</td>
+            <td>&lt;image&gt;</td>
+            <td>Good old fashioned family time around the tv</td>
+            <td>ft</td>
+        </tr>
+        <tr>
+            <td>$fidget</td>
+            <td>&lt;image&gt;</td>
+            <td>Makes an image kinda do a fidget spinner-like effect (still working on this)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$flagged</td>
+            <td>&lt;image&gt;</td>
+            <td>Your post has been flagged for containing sensitive content</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$flashback</td>
+            <td>&lt;image&gt;</td>
+            <td>Flashback to Vietnam, scarier than what your grandaddy could tell ya!</td>
+            <td>vietnam,nam</td>
+        </tr>
+        <tr>
+            <td>$flip</td>
+            <td>&lt;image&gt;</td>
+            <td>Flip image over y axis</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$flipflop</td>
+            <td>&lt;image&gt;</td>
+            <td>Flip image over x and y axis</td>
+            <td>ff,flfl</td>
+        </tr>
+        <tr>
+            <td>$flop</td>
+            <td>&lt;image&gt;</td>
+            <td>Flip image over x axis</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$funkytime</td>
+            <td>&lt;image&gt;</td>
+            <td>Its time to get funky</td>
+            <td>funky,funkytimes,funkymode</td>
+        </tr>
+        <tr>
+            <td>$gameboy</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Gameboy game cover</td>
+            <td>nintendogameboy,nintendogameboygame</td>
+        </tr>
+        <tr>
+            <td>$gameboyadvance</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Gameboy Advance game cover</td>
+            <td>gbadvance,gbadvance,gba,gameboyadv</td>
+        </tr>
+        <tr>
+            <td>$gameboycolor</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image as something being played on a purple Gameboy Color</td>
+            <td>gbc</td>
+        </tr>
+        <tr>
+            <td>$gamecube</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Nintendo Gamecube game cover</td>
+            <td>nintendogamecube,nintendogc,ngcgame,gamecub</td>
+        </tr>
+        <tr>
+            <td>$garbage</td>
+            <td>&lt;image&gt;</td>
+            <td>Pills that make you stare at garbage</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$gay</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the gay pride / rainbow flag to an image</td>
+            <td>gayy,pride,gaypride,kappapride,rainbow</td>
+        </tr>
+        <tr>
+            <td>$glitch</td>
+            <td>&lt;image&gt; [number &gt;=1]</td>
+            <td>Glitches an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$glow</td>
+            <td>&lt;image&gt;</td>
+            <td>Make an image glow</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$glow</td>
+            <td>&lt;image&gt;</td>
+            <td>Make an image glow</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$gmagik</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a gif with magik from an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$gmagik</td>
+            <td>&lt;image&gt;</td>
+            <td>Performs magik on a gif</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$god</td>
+            <td>&lt;image&gt;</td>
+            <td>Is it really him?</td>
+            <td>godd</td>
+        </tr>
+        <tr>
+            <td>$goldstar</td>
+            <td>&lt;image&gt;</td>
+            <td>Gold star slightly transparent overlay on an image</td>
+            <td>gs</td>
+        </tr>
+        <tr>
+            <td>$gorgeous</td>
+            <td>&lt;image&gt;</td>
+            <td>Meet the most beautiful Ukrainian woman in the world</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$green</td>
+            <td>(text...)</td>
+            <td>Turn your message text into green text ( like 4chan text )</td>
+            <td>greentext</td>
+        </tr>
+        <tr>
+            <td>$grey</td>
+            <td>&lt;image&gt;</td>
+            <td>Apply greyscale to image</td>
+            <td>gray</td>
+        </tr>
+        <tr>
+            <td>$greyscale</td>
+            <td>&lt;image&gt;</td>
+            <td>Removes color from an image (greyscale)</td>
+            <td>bw,grayscale,gray,blackandwhite</td>
+        </tr>
+        <tr>
+            <td>$gridify</td>
+            <td>&lt;image&gt;</td>
+            <td>Create a grid out of the specified image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$grill</td>
+            <td>&lt;text&gt;</td>
+            <td>Hot grill has a message on a bottle for you</td>
+            <td>gril</td>
+        </tr>
+        <tr>
+            <td>$grohl</td>
+            <td>&lt;image&gt;</td>
+            <td>Dave Grohl holding up an awesome magazine</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$grow</td>
+            <td>&lt;image&gt;</td>
+            <td>Multiply an image into a bubble and make it grow larger as a gif</td>
+            <td>bubbleg</td>
+        </tr>
+        <tr>
+            <td>$gspin</td>
+            <td>&lt;image&gt;</td>
+            <td>Make an image spin 360 degrees as an animated gif</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$guild</td>
+            <td></td>
+            <td>Replies with the current guilds roles</td>
+            <td>guildroles,groles</td>
+        </tr>
+        <tr>
+            <td>$guildicon</td>
+            <td></td>
+            <td>Returns the icon (image) of the current server</td>
+            <td>icon</td>
+        </tr>
+        <tr>
+            <td>$gumdrops</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a colored checkerboard on an image</td>
+            <td>gumdrop</td>
+        </tr>
+        <tr>
+            <td>$hansen</td>
+            <td>&lt;image&gt;</td>
+            <td>Chris Hansen came knocking at your door</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$hate</td>
+            <td>&lt;image&gt;</td>
+            <td>Dermatologists HATE him (clickbait)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$hawking</td>
+            <td>&lt;image&gt;</td>
+            <td>Stephen Hawking (RIP) has painted a lovely picture posthumously</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$help</td>
+            <td>[commandname]</td>
+            <td>Replies with more info about the specified command or the help website url</td>
+            <td>list,helplist,helpme</td>
+        </tr>
+        <tr>
+            <td>$hex</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a hex grid</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$homie</td>
+            <td>&lt;image&gt;</td>
+            <td>Homie</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$hotdamn</td>
+            <td>&lt;image</td>
+            <td>Hot damn that looks good! ( image magick testing )</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$hotdamn</td>
+            <td>&lt;image</td>
+            <td>Hot damn that looks good! ( image magick testing )</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$howto</td>
+            <td>text...</td>
+            <td>How to be something amazing</td>
+            <td>how2,whow</td>
+        </tr>
+        <tr>
+            <td>$ifunny</td>
+            <td>&lt;image&gt;</td>
+            <td>Adds the ifunny.co watermark to the bottom of an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$img</td>
+            <td>text...</td>
+            <td>Searches for an image (BETA - may not work entirely or properly and may end up getting my server IP blacklisted, in which case it will fail)</td>
+            <td>image</td>
+        </tr>
+        <tr>
+            <td>$implode</td>
+            <td>&lt;image&gt;</td>
+            <td>Implodes an image into a gif</td>
+            <td>gimplode</td>
+        </tr>
+        <tr>
+            <td>$inkling</td>
+            <td>&lt;image&gt;</td>
+            <td>A glimmer of hope in this inklings eye</td>
+            <td>ink</td>
+        </tr>
+        <tr>
+            <td>$invert</td>
+            <td>&lt;image&gt;</td>
+            <td>Inverts an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$invite</td>
+            <td></td>
+            <td>Sends bot and bot server invite info via DM ( if possible ) as well as the current channel</td>
+            <td>info</td>
+        </tr>
+        <tr>
+            <td>$iphonex</td>
+            <td>&lt;image&gt;</td>
+            <td>Something interesting just showed up on my iPhone X screen . . .</td>
+            <td>iphone,iphone10</td>
+        </tr>
+        <tr>
+            <td>$isolate</td>
+            <td>&lt;image&gt; &lt;color&gt;</td>
+            <td>Isolate a color - choose the color you want to KEEP ( or hue value 0 - 360 )</td>
+            <td>iso</td>
+        </tr>
+        <tr>
+            <td>$jack</td>
+            <td>&lt;image&gt;</td>
+            <td>Jack overlay on image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$jack</td>
+            <td>&lt;image&gt;</td>
+            <td>Jack overlay on image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$jackpuke</td>
+            <td>&lt;image&gt;</td>
+            <td>Something made Jack puke</td>
+            <td>puke</td>
+        </tr>
+        <tr>
+            <td>$jesus</td>
+            <td>&lt;image&gt;</td>
+            <td>Jesus is showing off his latest creation</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$kaleidoscope</td>
+            <td>&lt;image&gt;</td>
+            <td>Create a kaleidoscope effect with an image</td>
+            <td>kal</td>
+        </tr>
+        <tr>
+            <td>$kek</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies multiple magick commands to an image</td>
+            <td>k1</td>
+        </tr>
+        <tr>
+            <td>$kek2/3/4</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies multiple magick commands to an image</td>
+            <td>kek2,kek3,kek4</td>
+        </tr>
+        <tr>
+            <td>$kirby</td>
+            <td>&lt;image&gt;</td>
+            <td>Kirby teaching a lesson</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$kirby</td>
+            <td>&lt;image&gt;</td>
+            <td>Kirby teaching a lesson</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$lesbianpride</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the lesbian pride flag to an image</td>
+            <td>lflag,lesbian</td>
+        </tr>
+        <tr>
+            <td>$license</td>
+            <td></td>
+            <td>Someone just got their drivers license</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$lighten</td>
+            <td>&lt;image&gt; [amount]</td>
+            <td>Lighten image by provided amount</td>
+            <td>light,ltn</td>
+        </tr>
+        <tr>
+            <td>$logan</td>
+            <td>&lt;image&gt;</td>
+            <td>Overlays Logan Paul on an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$logout</td>
+            <td>&lt;text...&gt;</td>
+            <td>Something you saw on Facebook that makes you regret ever using the service in the first place</td>
+            <td>fb,facebook</td>
+        </tr>
+        <tr>
+            <td>$look</td>
+            <td>&lt;image&gt;</td>
+            <td>What's that in the sky?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$lower</td>
+            <td>(text..)</td>
+            <td>Makes the input text all lowercase</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$lsd</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies an lsd effect to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$magik</td>
+            <td>&lt;image&gt;</td>
+            <td>Apply magik to image</td>
+            <td>magick,gmagik</td>
+        </tr>
+        <tr>
+            <td>$mainstream</td>
+            <td>&lt;image&gt;</td>
+            <td>This might be too mainstream for you</td>
+            <td>mains</td>
+        </tr>
+        <tr>
+            <td>$mandaloscope</td>
+            <td>&lt;image&gt;</td>
+            <td>Create a mandaloscope effect with an image</td>
+            <td>man</td>
+        </tr>
+        <tr>
+            <td>$marble</td>
+            <td>&lt;image&gt;</td>
+            <td>Turn an image into a marble</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$mario</td>
+            <td>&lt;image&gt;</td>
+            <td>Mario running towards something strange</td>
+            <td>marios,odyssey</td>
+        </tr>
+        <tr>
+            <td>$mariobros</td>
+            <td>&lt;image&gt;</td>
+            <td>Mario bros. out on an adventure</td>
+            <td>mb</td>
+        </tr>
+        <tr>
+            <td>$massnick</td>
+            <td>(nickname..) | clear</td>
+            <td>Changes the nickname of all server members ( where the bot has a higher role than )</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$mblur</td>
+            <td>&lt;image&gt; [0-100]</td>
+            <td>Blur an image by the specified amount</td>
+            <td>mblu,mlurb,motionblur,mblue</td>
+        </tr>
+        <tr>
+            <td>$meet</td>
+            <td>&lt;image&gt;</td>
+            <td>It is nice to finally meet you</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$meet</td>
+            <td>&lt;image&gt;</td>
+            <td>It is nice to finally meet you</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$meme</td>
+            <td>&lt;image&gt; &lt;text...(top max = 20 chars, bottom max = 20 chars)&gt;</td>
+            <td>Add text to an image, like MemeGenerator. Use | to split top and bottom text, otherwise will split by the space before the last word.</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$merge</td>
+            <td>&lt;image1&gt; &lt;image2&gt;</td>
+            <td>Merges 2 images together</td>
+            <td>composite</td>
+        </tr>
+        <tr>
+            <td>$merge</td>
+            <td>&lt;image1&gt; &lt;image2&gt;</td>
+            <td>Merges 2 images together</td>
+            <td>composite</td>
+        </tr>
+        <tr>
+            <td>$million</td>
+            <td>&lt;image&gt;</td>
+            <td>Would you go down here for a million dollars?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$million</td>
+            <td>&lt;image&gt;</td>
+            <td>Would you go down here for a million dollars?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$miranda</td>
+            <td>&lt;image&gt;</td>
+            <td>Miranda C riding around in the car</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$mono</td>
+            <td>&lt;image&gt;</td>
+            <td>Apply monochrome filter to an image</td>
+            <td>monochrome,monoch</td>
+        </tr>
+        <tr>
+            <td>$muldoon</td>
+            <td>&lt;image&gt;</td>
+            <td>Above-your-thighs-khaki-shorts-wearing Muldoon from Jurassic Park</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$mute</td>
+            <td>&lt;@user | userid&gt;</td>
+            <td>Mutes a user (denies SEND_MESSAGES privileges in this channel). If the user is already muted, they will be unmuted. This command is still a WIP</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$n64</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Nintendo 64 game cover</td>
+            <td>nintendo64,nintendo64game,n64game</td>
+        </tr>
+        <tr>
+            <td>$nasa</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the NASA logo as a filter to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$negative</td>
+            <td>&lt;image&gt;</td>
+            <td>Apply negative filter to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$newspaper</td>
+            <td>&lt;image&gt; &lt;text&gt;</td>
+            <td>Adds text like a newspaper over an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$nextgen</td>
+            <td></td>
+            <td>Next-gen stuff created by an artist of true talent</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$nightvision</td>
+            <td>&lt;image&gt;</td>
+            <td>Apply nightvision to an image</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td>$nonbinary</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the nonbinary flag to an image</td>
+            <td>nb</td>
+        </tr>
+        <tr>
+            <td>$nope</td>
+            <td>&lt;image&gt;</td>
+            <td>Nope not doing this</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$nope</td>
+            <td>&lt;image&gt;</td>
+            <td>Nope not doing this</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$noproblem</td>
+            <td>&lt;image&gt;</td>
+            <td>No really, its no problem at all</td>
+            <td>np,noprob</td>
+        </tr>
+        <tr>
+            <td>$onision</td>
+            <td>&lt;image&gt;</td>
+            <td>Not even sure, some template someone suggested</td>
+            <td>onis</td>
+        </tr>
+        <tr>
+            <td>$onision</td>
+            <td>&lt;image&gt;</td>
+            <td>Not even sure, some template someone suggested</td>
+            <td>onis</td>
+        </tr>
+        <tr>
+            <td>$outline</td>
+            <td>&lt;image&gt;</td>
+            <td>Performs some magick outlines on the image</td>
+            <td>ol</td>
+        </tr>
+        <tr>
+            <td>$p90</td>
+            <td>[none]/[name]/[search &lt;query&gt;]</td>
+            <td>Pulls a webm from https://p90.zone</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$paint</td>
+            <td>&lt;image&gt;</td>
+            <td>Painting a lovely picture</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$painting</td>
+            <td>&lt;image&gt;</td>
+            <td>Places an image inside of a Code Geass Euphemia Frame</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$pansexual</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the pansexual flag to an image</td>
+            <td>pansex</td>
+        </tr>
+        <tr>
+            <td>$patrick</td>
+            <td>&lt;image&gt;</td>
+            <td>Patrick found something cool</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$pc</td>
+            <td>&lt;image&gt;</td>
+            <td>Makes an image look Pretty darn Cool</td>
+            <td>prettycool</td>
+        </tr>
+        <tr>
+            <td>$pc</td>
+            <td>&lt;image&gt;</td>
+            <td>Makes an image look Pretty darn Cool</td>
+            <td>prettycool</td>
+        </tr>
+        <tr>
+            <td>$pca</td>
+            <td>&lt;image&gt;</td>
+            <td>Makes an image look Pretty darn Cool (animates it)</td>
+            <td>prettycoola</td>
+        </tr>
+        <tr>
+            <td>$pcstrobe</td>
+            <td>&lt;image&gt;</td>
+            <td>Makes an image look Pretty darn Cool (strobe animation)</td>
+            <td>pcs</td>
+        </tr>
+        <tr>
+            <td>$peel</td>
+            <td>&lt;image&gt; &lt;image2&gt;</td>
+            <td>BETA - layer two images on top of each other, and create an effect that looks like turning the page in a book</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$peelingpaint</td>
+            <td>&lt;image&gt;</td>
+            <td>Apply a peeling paint effect to an image</td>
+            <td>paint</td>
+        </tr>
+        <tr>
+            <td>$peelingpaint</td>
+            <td>&lt;image&gt;</td>
+            <td>Apply a peeling paint effect to an image</td>
+            <td>paint</td>
+        </tr>
+        <tr>
+            <td>$ping</td>
+            <td>(url)</td>
+            <td>Ping the provided host, if valid ( otherwise it displays the current Client ping )</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$piranha</td>
+            <td>&lt;image&gt;</td>
+            <td>Piranha from Mario</td>
+            <td>pir</td>
+        </tr>
+        <tr>
+            <td>$pixelate</td>
+            <td>&lt;image&gt; [amount]</td>
+            <td>Pixelate an image</td>
+            <td>pixel,pix</td>
+        </tr>
+        <tr>
+            <td>$playing</td>
+            <td>&lt;game&gt;</td>
+            <td>Searches steam for a specific game and returns the amount of people currently playing that game</td>
+            <td>steam</td>
+        </tr>
+        <tr>
+            <td>$point</td>
+            <td>&lt;image&gt;</td>
+            <td>Trump pointing to something exciting and important</td>
+            <td>piont,trumppoint,tpoint,trump</td>
+        </tr>
+        <tr>
+            <td>$polaroid</td>
+            <td>&lt;image&gt;</td>
+            <td>Uses a polaroid and frame type effect on an image</td>
+            <td>pol</td>
+        </tr>
+        <tr>
+            <td>$posterize</td>
+            <td>&lt;image&gt; [amount]</td>
+            <td>Posterize an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$pray</td>
+            <td>&lt;image&gt;</td>
+            <td>Only pray to the one true god</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$prefix</td>
+            <td>[*reset | *prefix]</td>
+            <td>Changes the bots prefix</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$prophecy</td>
+            <td>&lt;image&gt;</td>
+            <td>A painting foretells a great prophecy</td>
+            <td>proph</td>
+        </tr>
+        <tr>
+            <td>$ps1</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Playstation game cover</td>
+            <td>playstation1,playstation1game,ps1game</td>
+        </tr>
+        <tr>
+            <td>$ps2</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Playstation 2 game cover</td>
+            <td>playstation2,playstation2game,ps2game</td>
+        </tr>
+        <tr>
+            <td>$ps3</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Playstation 3 game cover</td>
+            <td>playstation3,playstation3game,ps3game</td>
+        </tr>
+        <tr>
+            <td>$ps4</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Playstation 4 game cover</td>
+            <td>playstation4,playstation4game,ps4game</td>
+        </tr>
+        <tr>
+            <td>$psp</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a PSP game cover</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$psvita</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a PS Vita game cover</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$pubg</td>
+            <td>&lt;user&gt;</td>
+            <td>Make yourself a true PUBG winner today (only works with valid Discord users for now, will add custom text option later)</td>
+            <td>pugb</td>
+        </tr>
+        <tr>
+            <td>$purge</td>
+            <td>&lt;1-100&gt;</td>
+            <td>Purges messages in a channel. Limit 100 messages</td>
+            <td>del</td>
+        </tr>
+        <tr>
+            <td>$puzzle</td>
+            <td>&lt;image&gt;</td>
+            <td>Turn an image into a jigsaw puzzle</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$rain</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies a cool filter to an image</td>
+            <td>rian,r1</td>
+        </tr>
+        <tr>
+            <td>$rain2</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies an additional cool filter to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$raindrop</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a raindrop like effect on an image</td>
+            <td>rd</td>
+        </tr>
+        <tr>
+            <td>$raindrop</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a raindrop like effect on an image</td>
+            <td>rd</td>
+        </tr>
+        <tr>
+            <td>$rainfore</td>
+            <td>&lt;image&gt;</td>
+            <td>One of the bot Owners testing commands, for both testing and fixing broken ImageMagick commands as well as creating new ones</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$rainfur</td>
+            <td>&lt;image&gt;</td>
+            <td>One of the bot Owners testing commands, for both testing and fixing broken ImageMagick commands as well as creating new ones</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$raingold</td>
+            <td>&lt;image&gt;</td>
+            <td>Turns an image into gold</td>
+            <td>riangold,gold</td>
+        </tr>
+        <tr>
+            <td>$raingold</td>
+            <td>&lt;image&gt;</td>
+            <td>Turns an image into gold</td>
+            <td>riangold,gold</td>
+        </tr>
+        <tr>
+            <td>$raise</td>
+            <td>&lt;image&gt; [0-30]</td>
+            <td>Raise the border of an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$rdr2</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a Red Dead Redemption 2 loading screen effect (not finished yet)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$readers</td>
+            <td>&lt;image&gt;</td>
+            <td>Forms a picture across a stand of people holding up signs</td>
+            <td>reader,rythm</td>
+        </tr>
+        <tr>
+            <td>$red</td>
+            <td>&lt;image&gt; [amount]</td>
+            <td>Apply red to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$religion</td>
+            <td>&lt;image&gt;</td>
+            <td>Want to join my religion?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$repeat</td>
+            <td>&lt;image&gt;</td>
+            <td>Repeats an image (2x2)</td>
+            <td>rep</td>
+        </tr>
+        <tr>
+            <td>$replace</td>
+            <td>&lt;image&gt; &lt;oldcolor&gt; &lt;newcolor&gt;</td>
+            <td>Replaces a specified color on an image with a new color. Use $colorlist to get a list of valid colors if you are unsure.  Lighting and resolution may effect the outcome of this command</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$report</td>
+            <td>(text &gt; 5 characters)</td>
+            <td>Report a bug, error, or suggestion</td>
+            <td>fix,suggest,suggestion</td>
+        </tr>
+        <tr>
+            <td>$resize</td>
+            <td>&lt;image&gt;</td>
+            <td>Resize an image or emoji</td>
+            <td>e,enlarge</td>
+        </tr>
+        <tr>
+            <td>$reveal</td>
+            <td>&lt;image&gt;</td>
+            <td>Couple reveals something interesting (well, at least SHE does)</td>
+            <td>faithful</td>
+        </tr>
+        <tr>
+            <td>$rex</td>
+            <td>&lt;programming language&gt; &lt;code...&gt;</td>
+            <td>Performs code on rextester.com (external)</td>
+            <td>rextester,rexx,rexy</td>
+        </tr>
+        <tr>
+            <td>$rgb</td>
+            <td>&lt;image&gt; [red amount] [green amount] [blue amount]</td>
+            <td>Apply RGB colors to an image</td>
+            <td>redgreenblue</td>
+        </tr>
+        <tr>
+            <td>$rgbdots</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a newspaper comic like effect with an image</td>
+            <td>rgbd,rbgd</td>
+        </tr>
+        <tr>
+            <td>$rgif</td>
+            <td>text...</td>
+            <td>Search for a gif (random from results)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$rotate</td>
+            <td>&lt;image&gt; [degrees]</td>
+            <td>Rotate an image ( by provided degrees )</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$s2s</td>
+            <td>&lt;image&gt;</td>
+            <td>Flips and image from side to side as a gif</td>
+            <td>sts</td>
+        </tr>
+        <tr>
+            <td>$safe</td>
+            <td>&lt;image&gt;</td>
+            <td>Have you marked yourself as safe?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$screenshot</td>
+            <td>&lt;url&gt;</td>
+            <td>Takes a screenshot of a valid webpage</td>
+            <td>ss</td>
+        </tr>
+        <tr>
+            <td>$sega</td>
+            <td>&lt;image&gt;</td>
+            <td>Overlays an image on a Sega CD case</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$sepia</td>
+            <td>&lt;image&gt;</td>
+            <td>Apply sepia filter to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$server</td>
+            <td>[server ID]</td>
+            <td>Replies with the servers stats</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$shards</td>
+            <td></td>
+            <td>Shows all shards stats</td>
+            <td>tards,turds,sharts,shard</td>
+        </tr>
+        <tr>
+            <td>$sharpen</td>
+            <td>&lt;image&gt;</td>
+            <td>Sharpens an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$shimmer</td>
+            <td>&lt;image&gt;</td>
+            <td>Reflection of an image with a shimmering effect</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$shuffle</td>
+            <td>&lt;image&gt;</td>
+            <td>Shuffles the pixels in an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$shuffle</td>
+            <td>&lt;image&gt;</td>
+            <td>Shuffles the pixels in an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$shutterstock</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies a Shutterstock watermark over the specified image</td>
+            <td>shutter</td>
+        </tr>
+        <tr>
+            <td>$sidemirror</td>
+            <td>&lt;image&gt;</td>
+            <td>Somethings coming up fast on our right side</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$skin</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies a skin over the provided image ( currently is just an American Flag )</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$sleep</td>
+            <td>&lt;image&gt;</td>
+            <td>Guy sleeping with his favorite record</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$smg</td>
+            <td>&lt;image&gt;</td>
+            <td>SMG overlaid on an image</td>
+            <td>gimplode</td>
+        </tr>
+        <tr>
+            <td>$snapchat</td>
+            <td></td>
+            <td>Adds a Snapchat filter to the provided image</td>
+            <td>sc</td>
+        </tr>
+        <tr>
+            <td>$snes</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Nintendo Snes game cover</td>
+            <td>nintendosnes,snesgame</td>
+        </tr>
+        <tr>
+            <td>$sonic</td>
+            <td>&lt;text&gt;</td>
+            <td>Sonic says</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$space</td>
+            <td>&lt;image&gt;</td>
+            <td>Add a space effect to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$spacex</td>
+            <td>&lt;image&gt;</td>
+            <td>Spaceman heading towards something amazing</td>
+            <td>starman,elon</td>
+        </tr>
+        <tr>
+            <td>$spin</td>
+            <td>&lt;image&gt; [-360-360]</td>
+            <td>Spin the color settings on an image</td>
+            <td>hue</td>
+        </tr>
+        <tr>
+            <td>$spiral</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a spiral like effect with an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$spiral</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a spiral like effect with an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$spots/spotsd/spotsq</td>
+            <td>&lt;image&gt;</td>
+            <td>Pixelates an image with circles, dots or squares</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$squidward</td>
+            <td>&lt;image&gt;</td>
+            <td>Squidward sees something outside of his window</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$stainedglass</td>
+            <td>&lt;image&gt;</td>
+            <td>Stained glass effect on an image</td>
+            <td>sg</td>
+        </tr>
+        <tr>
+            <td>$stairs</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a stairs like effect with an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$stamp</td>
+            <td></td>
+            <td>Redeem for foods</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$starwars</td>
+            <td>&lt;image1&gt;&lt;image2&gt;</td>
+            <td>I am your father</td>
+            <td>sw,luke</td>
+        </tr>
+        <tr>
+            <td>$starwars</td>
+            <td>&lt;image1&gt;&lt;image2&gt;</td>
+            <td>I am your father</td>
+            <td>sw,luke</td>
+        </tr>
+        <tr>
+            <td>$stone</td>
+            <td>&lt;image&gt;</td>
+            <td>Turns an image into stone</td>
+            <td>stone2,stone3</td>
+        </tr>
+        <tr>
+            <td>$swirl</td>
+            <td>&lt;image&gt;</td>
+            <td>Swirls the image by the inputted amount (default 50) with magick. Positive swirls left and negative swirls right</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$switch</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Nintendo Switch game cover</td>
+            <td>nintendoswitch,switchgame</td>
+        </tr>
+        <tr>
+            <td>$tag</td>
+            <td>(name) [args] | add (name) (content..) | edit (name) (content..) | random | rename (name) (newName) | gift (name) (newOwner) | delete (name) | raw (name) | owner (name) | list [user]</td>
+            <td>Create a new tag (aka custom thing that the bot will say)</td>
+            <td>t</td>
+        </tr>
+        <tr>
+            <td>$tbc</td>
+            <td>&lt;image&gt;</td>
+            <td>To be continued ...</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$tbc</td>
+            <td>&lt;image&gt;</td>
+            <td>To be continued ...</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$thatsnice</td>
+            <td>&lt;image&gt;</td>
+            <td>That looks really nice</td>
+            <td>tn</td>
+        </tr>
+        <tr>
+            <td>$think</td>
+            <td>&lt;image&gt;</td>
+            <td>OwO would you look at this!</td>
+            <td>thonk,thinking,thin</td>
+        </tr>
+        <tr>
+            <td>$this</td>
+            <td>&lt;image&gt;</td>
+            <td>You wont believe what happens when you go from this to this</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$thonkify</td>
+            <td>&lt;text&gt;</td>
+            <td>Thonkifies text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$tilt</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies some fun distortion to the image that applies a tilt effect</td>
+            <td>exo4</td>
+        </tr>
+        <tr>
+            <td>$time</td>
+            <td>&lt;image&gt;</td>
+            <td>Time magazine presents:</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$tk</td>
+            <td>&lt;image&gt;</td>
+            <td>Trump and Kim spot something on a stroll through the park</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$toast</td>
+            <td>&lt;image&gt;</td>
+            <td>The leader of the free world toasts to you</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$tommy</td>
+            <td>&lt;image&gt;</td>
+            <td>Tommy is looking up some things on Google</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$toon</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a cartoon-like effect from an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$top</td>
+            <td>(1 - 15)</td>
+            <td>Shows the top commands for the bot</td>
+            <td>topcommands</td>
+        </tr>
+        <tr>
+            <td>$totaltags</td>
+            <td>&lt;image&gt;</td>
+            <td>Returns the number of tags that have been created</td>
+            <td>ttags</td>
+        </tr>
+        <tr>
+            <td>$tp</td>
+            <td>&lt;image&gt;</td>
+            <td>Takes an image and transforms it into a tiny planet</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$tp</td>
+            <td>&lt;image&gt;</td>
+            <td>Takes an image and transforms it into a tiny planet</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$tproll</td>
+            <td>&lt;image&gt;</td>
+            <td>Not your average, everday brand of toilet paper</td>
+            <td>toiletroll</td>
+        </tr>
+        <tr>
+            <td>$transition1/2/3/4/5/6/7/8/9</td>
+            <td>&lt;image1&gt; &lt;image2&gt;</td>
+            <td>Creates an animated transition with the two required image args. There are 9 different transition commands, each with the respective number after 'transition'. Works best with solid images, not as well with transparent images and emojis.</td>
+            <td>tran,tran2,tran3,tran4,tran5,tran6,tran7,tran8,tran9</td>
+        </tr>
+        <tr>
+            <td>$truman</td>
+            <td>&lt;image&gt;</td>
+            <td>Truman holding up the paper</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$trumptweet</td>
+            <td>&lt;image&gt;</td>
+            <td>What could trump be tweeting about this time?</td>
+            <td>tweet</td>
+        </tr>
+        <tr>
+            <td>$truth</td>
+            <td>&lt;image&gt;</td>
+            <td>Discover the real truth</td>
+            <td>truthabout</td>
+        </tr>
+        <tr>
+            <td>$tunnel</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a tunnel like effect with an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$tv</td>
+            <td>&lt;image&gt;</td>
+            <td>Whats on tv tonight?</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$u2d</td>
+            <td>&lt;image&gt;</td>
+            <td>Flips and image up and down as a gif</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$ugly</td>
+            <td>&lt;image&gt;</td>
+            <td>How is it possible to be so ugly, yet so lucky at the same time? Find out now!</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$uid</td>
+            <td>[user]</td>
+            <td>Replies with the users ID</td>
+            <td>userid</td>
+        </tr>
+        <tr>
+            <td>$undo</td>
+            <td></td>
+            <td>BETA/Still Implementing - Deletes the last command you used the previously used. </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$upper</td>
+            <td>(text..)</td>
+            <td>Capitalizes the input text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$usage</td>
+            <td>&lt;command name&gt;</td>
+            <td>Returns the number of times this command has been used</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$user</td>
+            <td>[user]</td>
+            <td>Replies with the users stats</td>
+            <td>about,userinfo</td>
+        </tr>
+        <tr>
+            <td>$userperms</td>
+            <td>[user], [-t/f]</td>
+            <td>Replies with the users permissions</td>
+            <td>pms,perms</td>
+        </tr>
+        <tr>
+            <td>$vglitch</td>
+            <td>&lt;image1&gt;</td>
+            <td>Applies a video glitching effect to an image</td>
+            <td>vglitch2,vglitch3</td>
+        </tr>
+        <tr>
+            <td>$victory</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the #1 Victory Royale overlay from Fortnite to an image</td>
+            <td>vr,victoryroyale</td>
+        </tr>
+        <tr>
+            <td>$vintage</td>
+            <td>&lt;image&gt;</td>
+            <td>Transforms an image into an old, vintage photo with a little bit of magik</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$vintage/2</td>
+            <td>&lt;image&gt;</td>
+            <td>Transforms an image into an old, vintage photo with a little bit of magik</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$vintage2</td>
+            <td>&lt;image&gt;</td>
+            <td>Transforms an image into an old, vintage photo with a little bit of magik</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$waaw/woow/haah/hooh</td>
+            <td>&lt;image&gt;</td>
+            <td>Mirrors an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$wall</td>
+            <td>&lt;image&gt;</td>
+            <td>Creates a tilted wall of the image after being repeated several times</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$warhol</td>
+            <td>&lt;image&gt; &lt;rows&gt; &lt;columns&gt;</td>
+            <td>Applies a warhol effect to an image. rows x columns (max 4x4, default is 1x1)</td>
+            <td>wh</td>
+        </tr>
+        <tr>
+            <td>$wasted</td>
+            <td>&lt;image&gt;</td>
+            <td>Applies the wasted filter from Grand Theft Auto to an image</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$what</td>
+            <td>&lt;image&gt;</td>
+            <td>Simpsons what?</td>
+            <td>whatsthat,skinner,simpsons</td>
+        </tr>
+        <tr>
+            <td>$whatshard</td>
+            <td></td>
+            <td>Tells the user what shard this server is currently in.  A shard is just an instance of Zephyr ( think of it like multiple tabs in your web browser )</td>
+            <td>where</td>
+        </tr>
+        <tr>
+            <td>$white</td>
+            <td>&lt;image&gt;</td>
+            <td>Takes all color out to make the image white (best for PNGs)</td>
+            <td>whiten,whiteify,blank</td>
+        </tr>
+        <tr>
+            <td>$whodidthis</td>
+            <td>&lt;image&gt;</td>
+            <td>Who did this??</td>
+            <td>wdt</td>
+        </tr>
+        <tr>
+            <td>$wiggle</td>
+            <td>&lt;image&gt;</td>
+            <td>Makes an image wiggle side to side</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$wii</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Nintendo Wii game cover</td>
+            <td>nintendowii,wiigame</td>
+        </tr>
+        <tr>
+            <td>$wii</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Nintendo Wii game cover</td>
+            <td>nintendowii,wiigame</td>
+        </tr>
+        <tr>
+            <td>$wiiu</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on a Nintendo Wii U game cover</td>
+            <td>nintendowiiu,wiiugame</td>
+        </tr>
+        <tr>
+            <td>$wma</td>
+            <td>&lt;image&gt;</td>
+            <td>Makes the image look as though it is on a piece of toilet paper</td>
+            <td>paper,toiletpaper,wipemyasswith,wipemyass,wmaw,napkin,dist2</td>
+        </tr>
+        <tr>
+            <td>$wtp</td>
+            <td>&lt;image&gt;</td>
+            <td>Whos that Pokemon?? ( works best on transparent PNGs and emojis or anything with a non-solid background )</td>
+            <td>whosthatpokemon</td>
+        </tr>
+        <tr>
+            <td>$xbone</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on an Xbox One game cover</td>
+            <td>xboxone,xbox1,xb1</td>
+        </tr>
+        <tr>
+            <td>$xbox360</td>
+            <td>&lt;image&gt;</td>
+            <td>Places the image on an Xbox 360 game cover</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>$youtube</td>
+            <td>search terms...</td>
+            <td>Searches Youtube for a video</td>
+            <td>yt</td>
+        </tr>
+        <tr>
+            <td>$zuck</td>
+            <td>&lt;image&gt;</td>
+            <td>Mark Zuckerberg approves of this</td>
+            <td>zuckerburg,zuckerberg,zucker,zucke,zuckr</td>
+        </tr>
+        <tr>
+            <td>$zws</td>
+            <td>-p</td>
+            <td>Sends a ZWS character to the current channel</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
